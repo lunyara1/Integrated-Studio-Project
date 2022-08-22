@@ -1,14 +1,14 @@
-//
-//  main.cpp
-//  Integrated-Studio-Project
-//
-//  Created by Vasyl Kolomiiets on 23/08/22.
-//
-
 #include <iostream>
+#include <vector>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+using namespace std;
+
+class Insurance
+{
+private:
+string custName;
+int policyNumber;
+double premium;
+
+public:
 }
