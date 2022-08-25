@@ -47,4 +47,45 @@ void setPremium(double prem)
 {
 premium = prem;
 }  
+virtual double getPremium()=0;
+virtual void print()=0;
+template<typename T>
+bool isA()
+{
+return (dynamic_cast<T*>(this) != NULL);
+}
+};
 
+class AutoPolicy:public Insurance
+{
+private:
+int noOfTickets;
+
+public:
+
+AutoPolicy(string cn,int pn,double prem,int tick):Insurance(cn,pn,prem)
+{
+noOfTickets = tick;
+}
+//The cost of insurance depends on the number of tickets
+double getPremium()
+{
+double ret;
+if(noOfTickets>=3)
+ret=175;
+else if(noOfTickets>=1 && noOfTickets<=2)
+ret=140;
+else
+ret=95;
+return ret;
+}
+int getNoOfTickets()
+{
+return noOfTickets;
+}
+void print()
+{
+cout << "Auto Insurance premium is: $" << getPremium() << endl;
+cout << endl;
+}
+};
