@@ -89,3 +89,40 @@ cout << "Auto Insurance premium is: $" << getPremium() << endl;
 cout << endl;
 }
 };
+//Main function
+int main() {
+
+//Registeration block
+  string login;
+  string user;
+  int login_times;
+  string password_login;
+  string password;
+  
+  string command;
+
+      cout << "Welcome to Vehicle Insurance System" << endl<<"-----------------------------------"<<endl;
+      cout << "Registeration new Admin"<<endl<<"-----------------------"<<endl;
+      cout <<"New Username: ";
+      cin >> user;
+      cout <<"New Password: ";
+      cin >> password;
+
+      cout << "\n";
+      cout << "Registered Successfully!"<<endl;
+     
+      login_times = 3;
+      while(login_times > 0){
+        
+        cout << "\n";
+        cout << "Login"<<endl<<"_____"<<endl;
+
+        cout << "Username: ";
+        cin >> login;
+        cout << "Password: ";
+        cin >> password_login;
+
+        if(login == user && password_login == password){
+          cout << "Loged in Successfully!"<<endl;
+          cout << "Welcome "<< user<<"!\n"<<endl;
+            
