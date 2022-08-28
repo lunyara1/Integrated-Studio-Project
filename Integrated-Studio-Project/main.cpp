@@ -125,4 +125,21 @@ int main() {
         if(login == user && password_login == password){
           cout << "Loged in Successfully!"<<endl;
           cout << "Welcome "<< user<<"!\n"<<endl;
-            
+
+//Vehicle Insurance System menu block
+vector<Insurance*> insurances;
+bool cont = true;
+while(cont)
+{
+int choice;
+cout << "Vehicle Insurance System" << endl;
+cout << "1-New Customer" << endl;
+cout << "2-Print Customer" << endl;
+cout << "3-Find Customer" << endl;
+cout << "4-Exit" << endl;
+
+cout << "Enter your choice: ";
+cin >> choice;
+
+switch(choice)
+{
