@@ -175,3 +175,34 @@ cout << (*it)->getCustomerName() << "\t\t" << (*it)->getPolicyNumber() << "\t\t\
     cout << endl;
 }
 break;
+    
+//=============== case 3 ========================
+case 3:
+{
+int pNum;
+bool found = false;
+cout << "Enter policy number: ";
+cin >> pNum;
+cout << endl;
+for (auto it = insurances.begin(); it != insurances.end(); it++)
+{
+if((*it)->getPolicyNumber() == pNum)
+{
+cout << "Customer: " << (*it)->getCustomerName() << endl;
+cout << "Policy# : " << (*it)->getPolicyNumber() << endl;
+
+if((*it)->isA<AutoPolicy>())
+{
+cout << "Number of Tickets: " << dynamic_cast<AutoPolicy*>(*it)->getNoOfTickets() << endl;
+dynamic_cast<AutoPolicy *>(*it)->print();
+}
+found = true;
+}
+
+}
+if(!found)
+cout << "Policy# " << pNum << " Not found" << endl;
+cout << endl;
+}
+break;
+        
