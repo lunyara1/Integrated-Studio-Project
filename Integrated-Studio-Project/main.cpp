@@ -143,3 +143,23 @@ cin >> choice;
 
 switch(choice)
 {
+//=============== case 1 ========================
+case 1:
+{
+string name;
+int policynum;
+int nooftick;
+double prem = 0.0;
+cout << "Enter customer name: ";
+cin.ignore();
+getline(cin, name);
+cout << "Enter policy number: ";
+cin >> policynum;
+cout << "Enter number of tickets: ";
+cin >> nooftick;
+cout << endl;
+AutoPolicy * abc = new AutoPolicy(name,policynum,prem,nooftick);
+abc->print();
+insurances.push_back(abc);
+}
+break;
