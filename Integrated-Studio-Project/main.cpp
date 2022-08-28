@@ -205,4 +205,41 @@ cout << "Policy# " << pNum << " Not found" << endl;
 cout << endl;
 }
 break;
+
+//=============== case 4 ========================
+case 4:
+{
+cout << "Goodbye!" << endl;
+cout << endl;
+cont = false;
+}
+break;
+}
+}
+return 0;
+}
+
+
         
+        else if(login != user && password_login == password){
+
+          cout << "Username is incorrect!"<<endl;
+          login_times--;
+          
+        }
+
+        else if(login == user && password_login != password){
+
+          cout << "Password is incorrect!"<<endl;
+          login_times--;
+          
+        }
+        else{
+          cout << "Everything is incorrect!"<<endl;
+          login_times--;
+        }
+      }
+      cout << "You have entered wrong details for more than 3 times, So we have blocked your account!";
+}
+
+
