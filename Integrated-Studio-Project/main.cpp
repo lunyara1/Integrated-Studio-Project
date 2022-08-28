@@ -163,3 +163,15 @@ abc->print();
 insurances.push_back(abc);
 }
 break;
+//=============== case 2 ========================
+case 2:
+{
+    cout << endl;
+cout << "Customer\tpolicy#\t\tPremium" << endl;
+for (auto it = insurances.begin(); it != insurances.end(); it++)
+{
+cout << (*it)->getCustomerName() << "\t\t" << (*it)->getPolicyNumber() << "\t\t\t$" << (*it)->getPremium() << endl;
+}
+    cout << endl;
+}
+break;
